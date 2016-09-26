@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>정유진</title> 
+	<title>JEONG YOOJIN</title> 
     <meta charset="utf-8"/>
     <meta authors="정유진"> 
     <meta copyright="본 예제는 [HTML5 웹프로그래밍 입문] 교재를 이용한 교육에만 사용할 수 있음">
@@ -10,30 +10,45 @@
     	@import 'https://fonts.googleapis.com/css?family=Montserrat';
     	@import 'https://fonts.googleapis.com/css?family=Lato';
     	
+    	body {
+    		margin: 0;
+    		font-family: 'Montserrat', sans-serif;
+    	}
+    	
     	.body_div {
     		width: 960px;
     		margin: 0 auto;
-    		font-family: 'Montserrat', sans-serif;
     	}
     
 		/*header start*/
 		header { 
-    		height:70px;
+    		height: 70px;
     	}
 		
 		nav {
-    		display:block;
+    		display: block;
+    		font-size: 16px;
     	}
     	
     	
 		.logo{
 			padding: 9px 0px;
-			width:35px;
-			float:left;
+			width: 35px;
+			float: left;
 		}
 		
 		.nav_menu {
 		    padding: 21px 0px;
+		}
+		
+		.nav_left {
+			float: left;
+		}
+		
+		nav audio {
+		    height: 26px;
+		    width: 244px;
+		    cursor: pointer;
 		}
 				
 		nav ul {
@@ -45,17 +60,52 @@
 		
 		nav li {
 		    display: inline;
+			color: #5a76f5;
 		}
 		
 		nav ul li a {
 			color: #5a76f5;
 			text-decoration: none;
+			letter-spacing: 2px;
+		}
+		
+		nav ul li a:hover {
+			color: #5a76f5;
+			border-bottom: 3px solid #5a76f5;
+			text-decoration: none; 
 		}
 		
 		.nav_margin {
 			margin-right: 22px;
 		}
 		/*header end*/
+		
+		/*aside start*/
+		aside {
+		    position: fixed;
+		    width: 12%;
+		    height: auto;
+		    margin-top: 59px;
+		}
+		
+		aside li{
+		   list-style: none;
+		   line-height: 23px;
+		}
+		
+		aside a{
+			color: #5a76f5;
+		    text-decoration: none;
+		    font-size: 13px;
+		    letter-spacing: 2px;
+		}
+		
+		aside a:hover{
+			color: white;
+		    background-color: #5a76f5;
+		    padding: 4px;
+		}
+		/*asdie end*/
 		
 		/*home section start*/
 		#home{
@@ -120,7 +170,8 @@
 		    content: "";
 		    display: inline-block;
 		    height: 3.5px;
-		    width: 37%;
+		    width:
+		    37%;
 		    margin: 10px 0px 10px 0px;
 		    background: #5a76f5;
 		}
@@ -133,7 +184,7 @@
 		}
 		/*about me section start*/
 		#about_me {
-			height: 500px;
+			height: auto;
 		}
 		
 		.section_about, .section_contact{
@@ -144,14 +195,46 @@
 		}
 		
 		.circle_none {
-		        width: 240px;
-			    height: 240px;
-			    margin: 34px;
-			    border: 4px solid transparent;
-			    border-radius: 50%;
-			    display: inline-block;
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid transparent;
+		    border-radius: 50%;
+		    display: inline-block;
 		}
 		
+		.circle_face {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: #5a76f5;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("face.png");
+			background-repeat:no-repeat;
+		}
+		
+		.about_box {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    text-align: center;
+		    display: inline-block;
+		}
+		
+		.mini_circle{
+			width: 25px;
+			height: 25px;
+		    border-radius: 50%;
+		    background-color: #89F3DA;
+		    margin: 0 auto;
+		    margin-bottom: 16px;
+		    /*display: inline-block;*/
+		    /*text-align: center;*/
+			/*position: relative;*/
+		 /*   margin: 50% auto;*/
+		}
 		/*about me section end*/
 		
 		/*portfolio section start*/
@@ -166,17 +249,78 @@
 		    letter-spacing: 5px;
 		}
 		
-		.circle {
-		        width: 240px;
-			    height: 240px;
-			    margin: 34px;
-			    border: 4px solid black;
-			    background-color: #5a76f5;
-			    border-radius: 50%;
-			    display: inline-block;
-			    background-image: url("home_bg.png");
-				background-repeat:no-repeat;
+		.circle_eskara{
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: #5a76f5;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("logo_eskara.png");
+			background-repeat:no-repeat;
 		}
+		
+		.circle_foodduck {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: #fad119;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("logo_foodduck.png");
+			background-repeat:no-repeat;
+		}
+		
+		.circle_tost {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: white;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("logo_tost.png");
+			background-repeat:no-repeat;
+		}
+		
+		.circle_pool {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: white;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("logo_pool.png");
+			background-repeat:no-repeat;
+		}
+		
+		.circle_survey {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: #00b7b6;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("logo_survey.png");
+			background-repeat:no-repeat;
+		}
+		
+		.circle_skklub {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: #cf7c6b;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("logo_skklub.png");
+			background-repeat:no-repeat;
+		}
+		
 		/*portfolio section end*/
 		
 		/*contact section start*/
@@ -184,13 +328,76 @@
 			height: auto;
 		}
 		
+		/*.circle_sns {*/
+		/*        width: 240px;*/
+		/*	    height: 240px;*/
+		/*	    margin: 34px;*/
+		/*	    border: 4px solid black;*/
+		/*	    background-color: #5a76f5;*/
+		/*	    border-radius: 50%;*/
+		/*	    display: inline-block;*/
+		/*	    background-image: url("home_bg.png");*/
+		/*		background-repeat:no-repeat;*/
+		/*}*/
+		
+		.circle_facebook {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: #5a76f5;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("sns_facebook.png");
+			background-repeat:no-repeat;
+		}
+		
+		.circle_insta {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: #5a76f5;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("sns_insta.png");
+			background-repeat:no-repeat;
+		}
+		
+		.circle_blog {
+	        width: 240px;
+		    height: 240px;
+		    margin: 34px;
+		    border: 4px solid black;
+		    background-color: #5a76f5;
+		    border-radius: 50%;
+		    display: inline-block;
+		    background-image: url("sns_blog.png");
+			background-repeat:no-repeat;
+		}
+		
+		.insta_box {
+	        width: 240px;
+		    height: 315px;
+		    margin: 34px;
+		    display: inline-block;
+		}
+		
+		.insta{
+		    width: 100%;
+		    height: 100%;
+		    border: 4px solid transparent;
+		    margin-bottom: 38px;
+		}
+		
 		iframe{
 			width: 100%;
 			height: 553px;
 			border: 4px solid black;
+			margin-bottom: 38px;
 		}
 		/*about me section end*/
-		
+
 		/*footer start*/
     	footer { 
     		clear: both; 
@@ -216,17 +423,44 @@
     	
     	/*footer end*/
     
+    
+	    .circle  {
+			-webkit-filter: grayscale(0) blur(0);
+			filter: grayscale(0) blur(0);
+			-webkit-transition: .3s ease-in-out;
+			transition: .3s ease-in-out;
+		}
+	.circle:hover {
+		/*opacity: 0.5;*/
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
 		
     </style>
 </head> 
 
 <body>
+	
+	<aside>
+		<div class="side_nav">
+			<ul>
+				 <li><a href="#home" class="nav_margin">HOME</a></li>
+				 <li><a href="#about_me" class="nav_margin">ABOUT ME</a></li>
+				 <li><a href="#portfolio" class="nav_margin">PORTFOLIO</a></li>
+				 <li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</div>
+	</aside>
+	
 	<div class="body_div">
 		<header>
 			<nav>
 		    	<!--<img src="like.png" class="logo"/>-->
 		    	
 		    	<div class="nav_menu">
+		    	<ul class="nav_left">
+				 	<li><audio controls src="russian.mp3" loop="3" autoplay></audio></li>
+				</ul>
 		    	<ul>
 				 	<li><a href="#home" class="nav_margin">HOME</a></li>
 				 	<li><a href="#about_me" class="nav_margin">ABOUT ME</a></li>
@@ -236,7 +470,7 @@
 				</div>
 		    </nav>
 		</header>
-  
+		
 		<section id="home">
 			<div class="home_in">
 		  		<table class="home_table">
@@ -253,27 +487,106 @@
 		<section id="about_me">
 			<div class="section_name"><h1 class="section_about">ABOUT ME</h1></div>
 			<div class="circle_none"></div>
-			<div class="circle"></div>
+			<div class="circle_face"></div>
 			<div class="circle_none"></div>
+			<div class="about_box">
+				<p>
+					<div class="mini_circle"></div>
+					INFO<br>
+					
+					NAME<br>
+					JEONG YOOJIN<br><br>
+					
+					BIRTHDATE<br>
+					1993.12.22<br><br>
+					 
+					EDUCATION<br>
+					SKKU<br>
+				</p>
+			</div>
+			<div class="about_box">
+				<p>
+					<div class="mini_circle"></div>
+					EXPERIENCE<br>
+					
+					ENGINEER<br>
+					@SUBS<br><br>
+					
+					DEVELOPER<br>
+					@LIKELIONxSKKU<br><br>
+					
+					DEVELOPER<br>
+					& DESIGNER<br>
+					@TEAM TOST<br>
+				</p>
+			</div>
+			<div class="about_box">
+				<p>
+					<div class="mini_circle"></div>
+					SKIILS<br>
+					
+					Python<br>
+					80%<br><br>
+					
+					Ruby On Rails<br>
+					70%<br><br>
+					
+					HTML&CSS<br>
+					100%<br><br>
+					
+					PHOTOSHOP<br>
+					80%<br><br>
+					
+					ILLUSTRATOR<br>
+					80%<br><br>
+				</p>
+			</div>
 		</section>
 	
 		<section id="portfolio">
 			<div class="section_name"><h1 class="section_portfolio">PORTFOLIO</h1></div>
-			<div class="circle"></div>
-			<div class="circle"></div>
-			<div class="circle"></div>
-			<div class="circle"></div>
-			<div class="circle"></div>
-			<div class="circle"></div>
+			
+			<a href="https://eskara-final-yoojinn93.c9users.io/"><div class="circle circle_eskara"></div></a>
+			<a href="https://foodscope-yoojinn93.c9users.io/"><div class="circle circle_foodduck"></div></a>
+			<a href="http://토스트.com"><div class="circle circle_tost"></div></a>
+			<a href="http://pool.skku.edu"><div class="circle circle_pool"></div></a>
+			<a href="https://login1-jeongyj.c9users.io/"><div class="circle circle_survey"></div></a>
+			<a href="https://skklub-yoojinn93.c9users.io/"><div class="circle circle_skklub"></div></a>
 		</section>
 		
 		<section id="contact">
-			<div class="section_name"><h1 class="section_contact">CONTACT</h1></div>
+			<div class="section_name"><h1 class="section_contact">PHOTO</h1></div>
 			
-			<a href="https://www.facebook.com/jeong.yoojin.5" target="sns_box"><div class="circle"></div></a>
-			<a href="//platform.instagram.com/en_US/embeds.js" target="sns_box"><div class="circle"></div></a>
-			<a href="https://blog.naver.com/yoojinn93" target="sns_box"><div class="circle"></div></a>
-			<iframe name="sns_box" src="https://www.youtube.com/embed/_C8O7dxaTI8" allowfullscreen></iframe> 
+			<div class="insta_box">
+				<iframe class="insta" src="https://www.instagram.com/p/BI5XSAsBhsr/embed"></iframe> 
+			</div>
+			
+			<div class="insta_box">
+				<iframe class="insta" src="https://www.instagram.com/p/BJURVm6AY25/embed"></iframe> 
+			</div>
+			
+			<div class="insta_box">
+				<iframe class="insta" src="https://www.instagram.com/p/BKGYOe8BoH6/embed"></iframe> 
+			</div>
+			
+			<div class="insta_box">
+				<iframe class="insta" src="https://www.instagram.com/p/BKV6-kqBf8l/embed"></iframe> 
+			</div>
+			
+			<div class="insta_box">
+				<iframe class="insta" src="https://www.instagram.com/p/BHyDNRuhE1x/embed"></iframe> 
+			</div>
+			
+			<div class="insta_box">
+				<iframe class="insta" src="https://www.instagram.com/p/BF5hqVtCmt3/embed"></iframe> 
+			</div>
+			
+			
+			
+			<!--<a href="https://www.facebook.com/jeong.yoojin.5" target="sns_box"><div class="circle_facebook"></div></a>-->
+			<!--<a href="https://www.instagram.com/p/BJURVm6AY25/embed" target="sns_box"><div class="circle_insta"></div></a>-->
+			<!--<a href="https://blog.naver.com/yoojinn93" target="sns_box"><div class="circle_blog"></div></a>-->
+			<!--<iframe name="sns_box" src="https://www.youtube.com/embed/_C8O7dxaTI8" allowfullscreen></iframe> -->
 			
 			<!--<table border="1">-->
 		 <!--       <tr>-->
@@ -290,8 +603,6 @@
 
 			
 		</section>
-		
-	  	
 	</div>
 	
 	<footer>
